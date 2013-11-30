@@ -523,3 +523,18 @@ on property:ro.debuggable=1
     chmod 666 /sys/class/mhl/timing
 on property:ro.debuggable=1
     chmod 666 /sys/class/mhl/swing
+
+on property:persist.fuse_sdcard=true
+	start sdcard
+
+service fuse_sdcard0 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/sdcard0 /storage/sdcard0
+	class late_start
+	disabled
+
+service fuse_sdcard1 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/sdcard1 /storage/sdcard1
+	class late_start
+	disabled
+
+service fuse_usbdisk /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/usbdisk /storage/usbdisk	
+	class late_start
+	disabled 
