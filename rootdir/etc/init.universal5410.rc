@@ -1,4 +1,4 @@
-import init.universal5410.usb.rc
+import init.universal5410.usb.
 import init.universal5410.wifi.rc
 
 on init
