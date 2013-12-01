@@ -1,7 +1,7 @@
 import init.universal5410.usb.rc
 import init.universal5410.wifi.rc
 
-on ini
+on init
     start watchdogd
 
      # For Absolute Persistence Partition
